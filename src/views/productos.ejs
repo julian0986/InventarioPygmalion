@@ -1,2 +1,62 @@
 <%- include("template/header.ejs") %>
+
     <h2>Estos son mis productos</h2>
+
+
+    <table>
+        <tr>
+            <th>Nombre Producto</th>
+            <th>Precio sin iva</th>
+            <th>Cantidad</th>
+            <th>Iva</th>
+            <th>Provedor</th>
+        </tr>
+        <% arrayproductos.forEach(element=> { %>
+            <tr>
+                <td>
+                    <%= element.nombre%>
+                </td>
+                <td>
+                    <%= element.preciosin%>
+                </td>
+                <td>
+                    <%= element.cantidad%>
+                </td>
+                <td>
+                    <%= element.iva%>
+                </td>
+                <td>
+                    <%= element.proveedor%>
+                </td>
+            </tr>
+
+            <% }) %>
+    </table>
+
+
+    <!-- <div>
+        <% arrayproductos.forEach(element=> { %>
+            <h1>
+                <%=element.nombre%>
+            </h1>
+            <h1>
+                <%=element.descripcion%>
+            </h1>
+            <h1>
+                <%=element.cantidad%>
+            </h1>
+            <h1>
+                <%=element.preciosin%>
+            </h1>
+            <h1>
+                <%=element.iva%>
+            </h1>
+            <h1>
+                <%=element.proveedor%>
+            </h1>
+            <% }) %>
+    </div> -->
+
+    </body>
+
+    </html>

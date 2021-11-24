@@ -4,6 +4,9 @@ const indexRoutes = require("./routes/index.route")
 app.set("view engine", "ejs")
 app.set("views", __dirname+"/views")
 
+//para los estaticos css js
+app.use(express.static(__dirname + "/public"));
+
 require("dotenv").config()
 const port = process.env.PORT || 3001;
 
