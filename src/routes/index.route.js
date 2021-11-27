@@ -27,8 +27,6 @@ router.get("/crear", (req, res) => {
 router.post("/", async (req, res) =>{
     const body = req.body;
     try {
-    /*     const productodb = new Producto(body)
-        await productodb.save() */
         await Producto.create(body)
         res.redirect("/productos")
     } catch (error) {
