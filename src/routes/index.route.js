@@ -1,5 +1,6 @@
 const express = require("express");
 const Producto = require("../models/producto");
+const productController = require("../controllers/productoController");
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -7,17 +8,7 @@ router.get("/", (req, res) => {
     res.render("index")
 })
 
-router.get("/productos", async (req, res)=>{
-    try {
-        const arraydb = await Producto.find()
-        res.render("productos", {
-            arrayproductos:arraydb
-        })
-    } catch (error) {
-        console.log(error)
-    }
-
-})
+router.get("/productos", productController.mostrarProductos);
 //llamar la ruta antesd del post
 router.get("/crear", (req, res) => {
     /* res.send("Hola desde aquí") */
