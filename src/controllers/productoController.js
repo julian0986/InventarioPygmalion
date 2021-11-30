@@ -20,7 +20,7 @@ exports.agregarProducto = async (req, res) => {
 exports.mostrarProducto = async (req, res, next) => {
     try {
         const producto = await productos.findById(req.params.idProducto);
-        res.render('crearproducto', {
+        res.render('mostrarProducto', {
             producto: producto
         });
        
@@ -29,6 +29,7 @@ exports.mostrarProducto = async (req, res, next) => {
         res.status(500).send(error);
         next();
     }
+}
 
 //mostrar productos
 exports.mostrarProductos = async (req, res,next) => {
