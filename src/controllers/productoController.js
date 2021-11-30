@@ -2,17 +2,21 @@ const productos = require('../models/producto');
 
 // agregar producto
 exports.agregarProducto = async (req, res) => {
-    const producto = new productos(req.body);
-
+    
+    const body = req.body;
     try {
-        await producto.save();
-        res.status(200).send({
-            message: 'Producto agregado correctamente'
-        });
+        const id = body.id;
+        if(id){
+            const productoM = await productos.findByIdAndUpdate(id, body, { new: true });
+        } else{
+            await productos.create(body)
+        }
+        res.redirect("/productos")
     } catch (error) {
-        res.status(400).send(error);
-        next();
+        console.log(error)
     }
+
+
 }
 
 
