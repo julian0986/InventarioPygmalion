@@ -15,11 +15,27 @@ exports.agregarProducto = async (req, res) => {
     }
 }
 
+
+//mostrar producto
+exports.mostrarProducto = async (req, res, next) => {
+    try {
+        const producto = await productos.findById(req.params.idProducto);
+        res.render('crearproducto', {
+            producto: producto
+        });
+       
+
+    } catch (error) {   
+        res.status(500).send(error);
+        next();
+    }
+
 //mostrar productos
 exports.mostrarProductos = async (req, res,next) => {
     
     try {
         const lsproducto = await productos.find();
+        console.log(lsproducto);
         res.render("productos", {
             arrayproductos:lsproducto
         })

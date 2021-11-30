@@ -8,6 +8,9 @@ router.get("/", (req, res) => {
     res.render("index")
 })
 
+
+
+
 router.get("/productos", productController.mostrarProductos);
 //llamar la ruta antesd del post
 router.get("/crear", (req, res) => {
