@@ -3,16 +3,15 @@
     <h1>Crear Producto</h1>
 
     <form action="/" method="POST">
-        <% if (producto) { %>
-           
+        <% if (producto) { %>           
             
-        <input type="hidden" name="idProducto" >
-        <input type="text" placeholder="Digite Producto" value="" name="nombre">
-        <input type="text" placeholder="Descripcion del producto" name="descripcion">
-        <input type="number" placeholder="Digite cantidad" name="cantidad">
-        <input type="number" placeholder="Digite precio sin iva" name="preciosin">
-        <input type="number" placeholder="Digite iva" name="iva">
-        <input type="text" placeholder="Digite porveedor" name="proveedor">
+        <input type="hidden" name="id" value="<%=producto._id %>" >
+        <input type="text" placeholder="Digite Producto" value="<%=producto.nombre %>" name="nombre">
+        <input type="text" placeholder="Descripcion del producto" value="<%=producto.descripcion %>" name="descripcion">
+        <input type="number" placeholder="Digite cantidad" value="<%=producto.cantidad %>" name="cantidad">
+        <input type="number" placeholder="Digite precio sin iva" value="<%=producto.preciosin %>" name="preciosin">
+        <input type="number" placeholder="Digite iva" value="<%=producto.iva %>" name="iva">
+        <input type="text" placeholder="Digite porveedor" value="<%=producto.proveedor %>" name="proveedor">
         <button type="submit">Guardar</button>
         <% } else { %>
             <input type="text" placeholder="Digite Producto" name="nombre">
