@@ -4,13 +4,15 @@
 
 
     <table>
-        <tr>
-            <th>Nombre Producto</th>
-            <th>Precio sin iva</th>
-            <th>Cantidad</th>
-            <th>Iva</th>
-            <th>Provedor</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Nombre Producto</th>
+                <th>Precio sin iva</th>
+                <th>Cantidad</th>
+                <th>Iva</th>
+                <th>Provedor</th>
+            </tr>
+        </thead>
         <% arrayproductos.forEach(element=> { %>
             <tr>
                 <td>
@@ -29,11 +31,12 @@
                     <%= element.proveedor%>
                 </td>
                 <td>
-                  <a href="producto/<%= element._id%>">Editar</a> 
+                    <a href="producto/<%= element._id%>">Editar</a>
                 </td>
                 <td>
-                    <a onclick="return confirm('Esta seguro que quiere eliminar el registro')" href="<%= `producto/${element._id}?_method=DELETE`  %>">| Eliminar</a> 
-                 </td>
+                    <a onclick="return confirm('Esta seguro que quiere eliminar el registro')"
+                        href="<%= `producto/${element._id}?_method=DELETE`  %>">| Eliminar</a>
+                </td>
                 <!--   <td>
                     <img src="<%= element.img%>" alt="">
                     

@@ -1,27 +1,48 @@
+@import"variables";
+
 header{
     margin: 2rem;    
     nav {
         display: flex;
         justify-content: space-between;
         
+       
+        
         ul{
             display: flex;
-            flex-grow: 1;  
-            justify-content: space-around;
+             
             list-style: none;
+         
 
-            li{
-                background-color: aqua;
-                border: 1px solid black;
+            p{
+                background-color:$colorpal;
+                border: 3px solid $colorsec;
                 margin: 1rem;
                 border-radius: 10px;
+                font-family: $robot;
+                font-size: 1rem;
+                padding: 10px 10px;
+
             }
+            p:hover{
+                background-color: $colorsec;
+                border: 3px solid $colorpal;
+                margin: 1rem;
+                border-radius: 10px;
+                font-family: $robot;
+                font-size: 1rem;
+                padding: 10px 10px;
+            }
+
 
             a{
                 text-decoration: none;
-                margin: 2rem;
+                color: #fff;
+
             }
+            
         }
+        
     img{
         width: 300px;
         height: auto;

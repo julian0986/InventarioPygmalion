@@ -15,19 +15,29 @@ header nav {
 }
 header nav ul {
   display: flex;
-  flex-grow: 1;
-  justify-content: space-around;
   list-style: none;
 }
-header nav ul li {
-  background-color: aqua;
-  border: 1px solid black;
+header nav ul p {
+  background-color: #1397d5;
+  border: 3px solid #95c11f;
   margin: 1rem;
   border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 10px 10px;
+}
+header nav ul p:hover {
+  background-color: #95c11f;
+  border: 3px solid #1397d5;
+  margin: 1rem;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 10px 10px;
 }
 header nav ul a {
   text-decoration: none;
-  margin: 2rem;
+  color: #fff;
 }
 header nav img {
   width: 300px;
