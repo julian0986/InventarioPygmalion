@@ -1,0 +1,58 @@
+@import"variables";
+
+.cre{
+    h2{
+
+        text-align: center;
+        margin: 0;
+    }
+}
+.crearprod{
+    display: flex;
+    justify-content: center;
+   
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        padding: 2rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        -webkit-box-shadow: 7px 7px 34px -9px rgba(0,0,0,0.75);
+        -moz-box-shadow: 7px 7px 34px -9px rgba(0,0,0,0.75);
+        box-shadow: 7px 7px 34px -9px rgba(0,0,0,0.75);
+
+        :nth-child(1){
+            padding-top: 0;
+        }
+
+        
+
+        input{
+            border: none;
+            border-bottom: solid 1px $colorsec;
+            padding: 15px;
+            text-align: center;
+        }
+
+        button{
+            margin-top: 20px;
+            background-color: $colorpal;
+            border: solid 3px $colorsec;
+            font-family: $nunito;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+
+       
+        }
+        button:hover{
+            background-color: $colorsec;
+            cursor: pointer;
+            font-weight: bold;
+            
+        }
+
+    }
+}

@@ -22,7 +22,7 @@ body header nav ul {
 }
 body header nav ul p {
   background-color: #1397d5;
-  border: 3px solid #95c11f;
+  border: 2px solid #95c11f;
   margin: 1rem;
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
@@ -31,7 +31,6 @@ body header nav ul p {
 }
 body header nav ul p:hover {
   background-color: #95c11f;
-  border: 3px solid #1397d5;
   margin: 1rem;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
@@ -48,7 +47,7 @@ body header nav img {
 }
 body h1 {
   text-align: center;
-  margin: 3rem 0rem;
+  margin: 1rem 2rem;
 }
 
 @media (max-width: 576px) {
@@ -122,6 +121,59 @@ h2 {
 }
 .tablaproductos table .editaricon {
   width: 30px;
+}
+
+@media screen and (min-width: 320px) {
+  .tablaproductos {
+    width: 100vw;
+  }
+  .tablaproductos table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+.cre h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.crearprod {
+  display: flex;
+  justify-content: center;
+}
+.crearprod form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 7px 7px 34px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 34px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 34px -9px rgba(0, 0, 0, 0.75);
+}
+.crearprod form :nth-child(1) {
+  padding-top: 0;
+}
+.crearprod form input {
+  border: none;
+  border-bottom: solid 1px #95c11f;
+  padding: 15px;
+  text-align: center;
+}
+.crearprod form button {
+  margin-top: 20px;
+  background-color: #1397d5;
+  border: solid 3px #95c11f;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+.crearprod form button:hover {
+  background-color: #95c11f;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
