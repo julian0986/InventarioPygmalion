@@ -1,6 +1,9 @@
 <%- include("template/header.ejs") %>
-
-    <h2>Estos son mis productos</h2>
+    <section>
+        <h2>Productos Terminados</h2>
+        <!-- <p>Buscar <input type="text" id="buscproducto"></p>
+        <button id="boton"> buscar</button> -->
+    </section>
 
     <section class="tablaproductos">
         <table>
@@ -14,6 +17,9 @@
                     <th>Acción</th>
                 </tr>
             </thead>
+            <!-- <ul id="resultado">
+                <li></li>
+            </ul> -->
             <% arrayproductos.forEach(element=> { %>
                 <tr>
                     <td>
@@ -50,7 +56,7 @@
     </section>
 
 
-
+    <!-- <script src="js/buscador.js"></script> -->
     </body>
 
     </html>
