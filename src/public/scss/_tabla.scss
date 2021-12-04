@@ -1,0 +1,38 @@
+@import"variables";
+
+.tablaproductos{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    table{
+        width: 100vw;
+        text-align: left;
+        margin: 0px 30px;
+        border-collapse:collapse;
+
+
+        th, td{
+            padding:15px;
+        }
+        thead{
+            background-color: $colorpal;
+            border-bottom: solid 5px $colorsec;
+            color: #fff;
+        }
+        
+        tr:nth-child(even){
+            background-color: $colorgris1;
+
+        }
+        tr:hover td{
+            background-color: $colorsec;
+            color: #fff;
+        }
+
+        .editaricon{
+            width: 30px;
+           
+        }
+    }
+}

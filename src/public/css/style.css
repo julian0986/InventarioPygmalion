@@ -6,42 +6,118 @@
   box-sizing: border-box;
 }
 
-header {
+body {
+  font-family: "Quicksand", sans-serif;
+}
+body header {
   margin: 2rem;
 }
-header nav {
+body header nav {
   display: flex;
   justify-content: space-between;
 }
-header nav ul {
+body header nav ul {
   display: flex;
   list-style: none;
 }
-header nav ul p {
+body header nav ul p {
   background-color: #1397d5;
   border: 3px solid #95c11f;
   margin: 1rem;
   border-radius: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1rem;
-  padding: 10px 10px;
+  padding: 10px 40px;
 }
-header nav ul p:hover {
+body header nav ul p:hover {
   background-color: #95c11f;
   border: 3px solid #1397d5;
   margin: 1rem;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  padding: 10px 10px;
+  padding: 10px 40px;
 }
-header nav ul a {
+body header nav ul a {
   text-decoration: none;
   color: #fff;
 }
-header nav img {
+body header nav img {
   width: 300px;
   height: auto;
+}
+body h1 {
+  text-align: center;
+  margin: 3rem 0rem;
+}
+
+@media (max-width: 576px) {
+  body {
+    margin: 10px;
+    padding: 10px;
+  }
+  body header {
+    margin: 1rem;
+  }
+  body header nav {
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+  }
+  body header nav ul {
+    display: flex;
+    list-style: none;
+    /* :nth-child(3){
+      background-color: red;
+      :nth-child(1){
+        background-color: red;
+        margin: 0;
+        padding: 0;
+      }
+    } */
+  }
+  body header nav ul p {
+    background-color: #1397d5;
+    border: 3px solid #95c11f;
+    width: 100%;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    font-size: 0.5rem;
+  }
+  body header nav ul a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0.5rem;
+  }
+}
+.tablaproductos {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.tablaproductos table {
+  width: 100vw;
+  text-align: left;
+  margin: 0px 30px;
+  border-collapse: collapse;
+}
+.tablaproductos table th, .tablaproductos table td {
+  padding: 15px;
+}
+.tablaproductos table thead {
+  background-color: #1397d5;
+  border-bottom: solid 5px #95c11f;
+  color: #fff;
+}
+.tablaproductos table tr:nth-child(even) {
+  background-color: #dadada;
+}
+.tablaproductos table tr:hover td {
+  background-color: #95c11f;
+  color: #fff;
+}
+.tablaproductos table .editaricon {
+  width: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

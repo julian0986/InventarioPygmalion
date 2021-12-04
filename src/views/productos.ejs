@@ -2,73 +2,54 @@
 
     <h2>Estos son mis productos</h2>
 
-
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre Producto</th>
-                <th>Precio sin iva</th>
-                <th>Cantidad</th>
-                <th>Iva</th>
-                <th>Provedor</th>
-            </tr>
-        </thead>
-        <% arrayproductos.forEach(element=> { %>
-            <tr>
-                <td>
-                    <%= element.nombre%>
-                </td>
-                <td>
-                    <%= element.preciosin%>
-                </td>
-                <td>
-                    <%= element.cantidad%>
-                </td>
-                <td>
-                    <%= element.iva%>
-                </td>
-                <td>
-                    <%= element.proveedor%>
-                </td>
-                <td>
-                    <a href="producto/<%= element._id%>">Editar</a>
-                </td>
-                <td>
-                    <a onclick="return confirm('Esta seguro que quiere eliminar el registro')"
-                        href="<%= `producto/${element._id}?_method=DELETE`  %>">| Eliminar</a>
-                </td>
-                <!--   <td>
+    <section class="tablaproductos">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre Producto</th>
+                    <th>Precio sin iva</th>
+                    <th>Cantidad</th>
+                    <th>Iva</th>
+                    <th>Provedor</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <% arrayproductos.forEach(element=> { %>
+                <tr>
+                    <td>
+                        <%= element.nombre%>
+                    </td>
+                    <td>
+                        <%= element.preciosin%>
+                    </td>
+                    <td>
+                        <%= element.cantidad%>
+                    </td>
+                    <td>
+                        <%= element.iva%>
+                    </td>
+                    <td>
+                        <%= element.proveedor%>
+                    </td>
+                    <!--   <td>
                     <img src="<%= element.img%>" alt="">
                     
-                </td> -->
-            </tr>
+                     </td> -->
+                    <td>
+                        <a href="producto/<%= element._id%>"><img class="editaricon" src="img/edit.png" alt=""></a>
+                        <a onclick="return confirm('Esta seguro que quiere eliminar el registro')"
+                            href="<%= `producto/${element._id}?_method=DELETE`  %>"><img class="editaricon"
+                                src="img/eliminar.png" alt=""></a>
+                    </td>
 
-            <% }) %>
-    </table>
+
+                </tr>
+
+                <% }) %>
+        </table>
+    </section>
 
 
-    <!-- <div>
-        <% arrayproductos.forEach(element=> { %>
-            <h1>
-                <%=element.nombre%>
-            </h1>
-            <h1>
-                <%=element.descripcion%>
-            </h1>
-            <h1>
-                <%=element.cantidad%>
-            </h1>
-            <h1>
-                <%=element.preciosin%>
-            </h1>
-            <h1>
-                <%=element.iva%>
-            </h1>
-            <h1>
-                <%=element.proveedor%>
-            </h1>
-            <% }) %>
-    </div> -->
 
     </body>
 

@@ -1,53 +1,111 @@
-@import"variables";
+@import "variables";
 
-header{
-    margin: 2rem;    
+body {
+    font-family: $quick;
+  header {
+    margin: 2rem;
     nav {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
         display: flex;
-        justify-content: space-between;
-        
-       
-        
-        ul{
-            display: flex;
-             
-            list-style: none;
-         
 
-            p{
-                background-color:$colorpal;
-                border: 3px solid $colorsec;
-                margin: 1rem;
-                border-radius: 10px;
-                font-family: $robot;
-                font-size: 1rem;
-                padding: 10px 10px;
+        list-style: none;
 
-            }
-            p:hover{
-                background-color: $colorsec;
-                border: 3px solid $colorpal;
-                margin: 1rem;
-                border-radius: 10px;
-                font-family: $robot;
-                font-size: 1rem;
-                padding: 10px 10px;
-            }
-
-
-            a{
-                text-decoration: none;
-                color: #fff;
-
-            }
-            
+        p {
+          background-color: $colorpal;
+          border: 3px solid $colorsec;
+          margin: 1rem;
+          border-radius: 10px;
+          font-family: $nunito;
+          font-size: 1rem;
+          padding: 10px 40px;
         }
-        
-    img{
+        p:hover {
+          background-color: $colorsec;
+          border: 3px solid $colorpal;
+          margin: 1rem;
+          border-radius: 10px;
+          font-family: $robot;
+          font-size: 1rem;
+          padding: 10px 40px;
+        }
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+
+      img {
         width: 300px;
         height: auto;
+      }
     }
+  }
+  
+  h1{
+      text-align: center;
+      margin: 3rem 0rem;
+  }
 }
 
+@media (max-width: 576px) {
+body{
+margin: 10px;
+padding: 10px;
+  header{
 
+    margin: 1rem;
+
+    nav{
+      flex-direction: column;
+      align-items: center;
+      margin: 15px;
+
+
+  
+        ul {
+          display: flex;
+          list-style: none;
+          
+
+          p {
+            background-color: $colorpal;
+            border: 3px solid $colorsec;
+            width: 100%;
+            border-radius: 10px;
+            font-family: $nunito;
+            font-size: 0.5rem;
+
+      
+      
+            
+            
+            
+          }
+         
+          a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0.5rem;
+     
+            
+            
+          }
+          /* :nth-child(3){
+            background-color: red;
+            :nth-child(1){
+              background-color: red;
+              margin: 0;
+              padding: 0;
+            }
+          } */
+        }
+
+    }
+  }
+
+ }
 }
