@@ -126,10 +126,10 @@ h2 {
 @media screen and (min-width: 320px) {
   .tablaproductos {
     width: 100vw;
-  }
-  .tablaproductos table {
-    display: block;
-    overflow-x: auto;
+    /*   table {
+          display: block;
+          overflow-x: auto;
+        } */
   }
 }
 .cre h2 {
