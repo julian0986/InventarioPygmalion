@@ -123,13 +123,9 @@ h2 {
   width: 30px;
 }
 
-@media screen and (min-width: 320px) {
-  .tablaproductos {
-    width: 100vw;
-    /*   table {
-          display: block;
-          overflow-x: auto;
-        } */
+@media screen and (max-width: 600px) {
+  body {
+    width: 100%;
   }
 }
 .cre h2 {
