@@ -23,6 +23,8 @@ router.get("/productos/:id", productController.mostrarProducto);
 
 router.put("/productos/:id", productController.modificarProducto);
 
+router.get("/producto/:id", productController.eliminarProducto);
+
 router.delete("/producto/:id", productController.eliminarProducto);
 //llamar la ruta antesd del post
 /* router.get("/crear", (req, res) => {
