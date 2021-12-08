@@ -1,62 +1,62 @@
 <%- include("template/header.ejs") %>
-    <section>
-        <h2>Productos Terminados</h2>
-        <!-- <p>Buscar <input type="text" id="buscproducto"></p>
+  <section>
+    <h2>Productos Terminados</h2>
+    <!-- <p>Buscar <input type="text" id="buscproducto"></p>
         <button id="boton"> buscar</button> -->
-    </section>
+  </section>
 
-    <section class="tablaproductos">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre Producto</th>
-                    <th>Precio sin iva</th>
-                    <th>Cantidad</th>
-                    <th>Iva</th>
-                    <th>Provedor</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <!-- <ul id="resultado">
+  <section class="tablaproductos">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre Producto</th>
+          <th>Precio sin iva</th>
+          <th>Cantidad</th>
+          <th>Iva</th>
+          <th>Provedor</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <!-- <ul id="resultado">
                 <li></li>
             </ul> -->
-            <% arrayproductos.forEach(element=> { %>
-                <tr>
-                    <td>
-                        <%= element.nombre%>
-                    </td>
-                    <td>
-                        <%= element.preciosin%>
-                    </td>
-                    <td>
-                        <%= element.cantidad%>
-                    </td>
-                    <td>
-                        <%= element.iva%>
-                    </td>
-                    <td>
-                        <%= element.proveedor%>
-                    </td>
-                    <!--   <td>
+      <% arrayproductos.forEach(element=> { %>
+        <tr>
+          <td>
+            <%= element.nombre%>
+          </td>
+          <td>
+            <%= element.preciosin%>
+          </td>
+          <td>
+            <%= element.cantidad%>
+          </td>
+          <td>
+            <%= element.iva%>
+          </td>
+          <td>
+            <%= element.proveedor%>
+          </td>
+          <!--   <td>
                     <img src="<%= element.img%>" alt="">
                     
                      </td> -->
-                    <td>
-                        <a href="producto/<%= element._id%>"><img class="editaricon" src="img/edit.png" alt=""></a>
-                        <a onclick="return confirm('Esta seguro que quiere eliminar el registro')"
-                            href="<%= `producto/${element._id}?_method=DELETE`  %>"><img class="editaricon"
-                                src="img/eliminar.png" alt=""></a>
-                    </td>
+          <td>
+            <a href="productos/<%= element._id%>"><img class="editaricon" src="img/edit.png" alt=""></a>
+            <a onclick="return confirm('Esta seguro que quiere eliminar el registro')"
+              href="<%= `producto/${element._id}?_method=DELETE`  %>"><img class="editaricon" src="img/eliminar.png"
+                alt=""></a>
+          </td>
 
 
-                </tr>
+        </tr>
 
-                <% }) %>
-        </table>
-    </section>
+        <% }) %>
+    </table>
+  </section>
 
 
-    <!-- <script src="js/buscador.js"></script> -->
-    </body>
+  <!-- <script src="js/buscador.js"></script> -->
+  </body>
 
-    </html>
+  </html>

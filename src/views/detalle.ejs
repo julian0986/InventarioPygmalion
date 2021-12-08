@@ -1,0 +1,67 @@
+<%- include("template/header.ejs") %>
+  <h2>Detalle</h2>
+  </section>
+  <section class="crearprod">
+    <form id="formularioEditar" data-id="<%= producto.id %>">
+      <input type="text" placeholder="Digite Producto" name="nombre" value="<%= producto.nombre%>" id="nombreInput">
+      <input type="text" placeholder="Descripcion del producto" name="descripcion" value="<%= producto.descripcion%>"
+        id="descripcionInput">
+      <input type="number" placeholder="Digite cantidad" name="cantidad" value="<%= producto.cantidad%>"
+        id="cantidadInput">
+      <input type="number" placeholder="Digite precio sin iva" name="preciosin" value="<%= producto.preciosin%>"
+        id="preciosinInput">
+      <input type="number" placeholder="Digite iva" name="iva" value="<%= producto.iva%>" id="ivaInput">
+      <input type="text" placeholder="Digite proveedor" name="proveedor" value="<%= producto.proveedor%>"
+        id="proveedorInput">
+      <button type="submit">Guardar cambios</button>
+
+
+
+    </form>
+  </section>
+
+  <script>
+
+    const formularioEditar = document.querySelector("#formularioEditar")
+
+    formularioEditar.addEventListener("submit", async (e) => {
+      e.preventDefault()
+
+      const id = formularioEditar.dataset.id
+      const nombre = formularioEditar.querySelector("#nombreInput").value
+      const descripcion = formularioEditar.querySelector("#descripcionInput").value
+      const cantidad = formularioEditar.querySelector("#cantidadInput").value
+      const preciosin = formularioEditar.querySelector("#preciosinInput").value
+      const iva = formularioEditar.querySelector("#ivaInput").value
+      const proveedor = formularioEditar.querySelector("#proveedorInput").value
+
+      try {
+        const data = await fetch(`/productos/${id}`, {
+          method: "put",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            nombre: nombre,
+            descripcion: descripcion,
+            cantidad: cantidad,
+            preciosin: preciosin,
+            iva: iva,
+            proveedor: proveedor
+          })
+        })
+        const res = await data.json()
+        console.log(res)
+        if (res.estado) {
+          window.location.href = "/productos"
+        } else {
+          console.log(res)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    })
+  </script>
+  </body>
+
+  </html>
