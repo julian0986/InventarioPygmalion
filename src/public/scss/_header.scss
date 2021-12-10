@@ -15,7 +15,7 @@ body {
 
         p {
           background-color: $colorpal;
-          border: 2px solid $colorsec;
+          border: 2px solid $colorpal;
           margin: 1rem;
           border-radius: 10px;
           font-family: $nunito;
@@ -24,7 +24,7 @@ body {
         }
         p:hover {
           background-color: $colorsec;
-          
+          border: 2px solid $colorsec;
           margin: 1rem;
           border-radius: 10px;
           font-family: $robot;

@@ -22,7 +22,7 @@ body header nav ul {
 }
 body header nav ul p {
   background-color: #1397d5;
-  border: 2px solid #95c11f;
+  border: 2px solid #1397d5;
   margin: 1rem;
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
@@ -31,6 +31,7 @@ body header nav ul p {
 }
 body header nav ul p:hover {
   background-color: #95c11f;
+  border: 2px solid #95c11f;
   margin: 1rem;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
@@ -140,6 +141,7 @@ h2 {
 .crearprod form {
   display: flex;
   flex-direction: column;
+  width: 40%;
   margin: 1rem;
   padding: 2rem;
   margin-top: 1rem;
@@ -170,6 +172,10 @@ h2 {
   background-color: #95c11f;
   cursor: pointer;
   font-weight: bold;
+}
+
+h2 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
