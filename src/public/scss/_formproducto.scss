@@ -40,7 +40,7 @@
         button{
             margin-top: 20px;
             background-color: $colorpal;
-            border: solid 3px $colorsec;
+            border: solid 3px $colorpal;
             font-family: $nunito;
             color: #fff;
             padding: 10px;
@@ -50,6 +50,7 @@
         }
         button:hover{
             background-color: $colorsec;
+            border: solid 3px $colorsec;
             cursor: pointer;
             font-weight: bold;
             
